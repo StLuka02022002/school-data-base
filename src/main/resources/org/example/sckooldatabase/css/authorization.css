@@ -1,0 +1,32 @@
+/* ComboBox Styles */
+.combo-box {
+    -fx-border-color: transparent;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 5px;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #00dffc;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #005f7f;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #005f7f;
+    -fx-background-radius: 10;
+}
+
+.combo-box .arrow:hover {
+    -fx-background-color: #004f6f;
+}
+
+.combo-box-popup {
+    -fx-background-color: #00dffc;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}

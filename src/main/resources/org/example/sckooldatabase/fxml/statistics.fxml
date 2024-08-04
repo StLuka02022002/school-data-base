@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sckooldatabase.controllers.StatisticsController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Файл">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#close" text="Закрыть" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Управление">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openAdderTeacherWindow" text="Добавить учителя" />
+                        <MenuItem mnemonicParsing="false" onAction="#openAdderSubjectWindow" text="Добавить предмет" />
+                        <MenuItem mnemonicParsing="false" onAction="#openAdderClassroomWindow" text="Добавить класс" />
+                  <MenuItem disable="true" mnemonicParsing="false" onAction="#openStatisticsWindow" text="Статистика" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Помощь" />
+            </menus>
+        </MenuBar>
+    </top>
+    <left>
+        <VBox prefHeight="370.0" prefWidth="255.0" spacing="5.0" style="-fx-border-width: 0;" BorderPane.alignment="CENTER">
+            <children>
+                <ListView fx:id="listViewTeachers" prefHeight="405.0" prefWidth="246.0" />
+            <Separator prefWidth="200.0" />
+            <ListView fx:id="listViewSubject" prefHeight="294.0" prefWidth="246.0" />
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </VBox>
+    </left>
+    <center>
+        <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="626.0" style="-fx-border-width: 0;" BorderPane.alignment="CENTER">
+            <content>
+                <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefWidth="640.0" style="-fx-border-width: 0;">
+                    <children>
+                        <Separator minHeight="535.0" orientation="VERTICAL" prefWidth="9.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-10.0" AnchorPane.topAnchor="0.0" />
+                  <VBox spacing="10.0" style="-fx-border-width: 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                              <HBox spacing="50.0">
+                                  <children>
+                                      <VBox spacing="25.0">
+                                          <children>
+                                              <Label prefWidth="180.0" text="Фамилия" />
+                                              <Label prefWidth="180.0" text="Имя" />
+                                              <Label prefWidth="180.0" text="Отчество" />
+                                              <Label prefWidth="180.0" text="Количесвто занятий" />
+                                              <Label prefWidth="180.0" text="Количесвто замен" />
+                                          </children>
+                                      </VBox>
+                                      <VBox fx:id="vBoxDataTeachers" spacing="25.0">
+                                          <children>
+                                              <TextField prefWidth="350.0" />
+                                              <TextField />
+                                              <TextField />
+                                    <TextField />
+                                    <TextField />
+                                          </children>
+                                      </VBox>
+                                  </children>
+                              </HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox spacing="50.0">
+                           <children>
+                              <VBox spacing="25.0">
+                                 <children>
+                                    <Label prefWidth="180.0" text="Предмет" />
+                                    <Label prefWidth="180.0" text="Количесвто занятий" />
+                                    <Label prefWidth="180.0" text="Количесвто экзаменов" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="vBoxDataSubjects" spacing="25.0">
+                                 <children>
+                                    <TextField prefWidth="350.0" />
+                                    <TextField />
+                                    <TextField />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                    </padding>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </center>
+    <stylesheets>
+        <URL value="@../css/adder.css" />
+        <URL value="@../css/main.css" />
+    </stylesheets>
+</BorderPane>

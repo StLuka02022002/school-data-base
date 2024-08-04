@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1210.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sckooldatabase.controllers.MainController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Файл">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#close" text="Закрыть" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Управление">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openAdderTeacherWindow" text="Добавить учителя" />
+                        <MenuItem mnemonicParsing="false" onAction="#openAdderSubjectWindow" text="Добавить предмет" />
+                        <MenuItem mnemonicParsing="false" onAction="#openAdderClassroomWindow" text="Добавить класс" />
+                  <MenuItem mnemonicParsing="false" onAction="#openStatisticsWindow" text="Статистика" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Помощь" />
+            </menus>
+        </MenuBar>
+    </top>
+   <left>
+      <VBox fx:id="vBox" alignment="TOP_CENTER" prefWidth="265.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Фильтр">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Separator />
+            <VBox alignment="CENTER">
+               <children>
+                  <VBox fx:id="vBoxDate" alignment="CENTER" spacing="5.0">
+                     <children>
+                        <Label text="Период " />
+                        <DatePicker prefWidth="145.0" />
+                        <DatePicker prefWidth="145.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <Separator />
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="Время начала" />
+                  <HBox fx:id="hBoxStartTime" alignment="CENTER" spacing="5.0">
+                     <children>
+                        <ComboBox prefWidth="80.0" HBox.hgrow="NEVER" />
+                        <Label text=":" />
+                        <ComboBox prefWidth="80.0" />
+                     </children>
+                  </HBox>
+                  <Label text="Время окончания" />
+                  <HBox fx:id="hBoxEndTime" alignment="CENTER" spacing="5.0">
+                     <children>
+                        <ComboBox prefWidth="80.0" />
+                        <Label text=":" />
+                        <ComboBox prefWidth="80.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator />
+            <VBox fx:id="vBoxSubject" alignment="CENTER">
+               <children>
+                  <Label text="Предмет" />
+               </children>
+            </VBox>
+            <ComboBox fx:id="comboBoxSubject" prefWidth="200.0" />
+            <Separator />
+            <VBox fx:id="vBoxTeacher" alignment="CENTER">
+               <children>
+                  <Label text="Учитель" />
+                  <ComboBox fx:id="comboBoxTeacher" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <Separator />
+            <VBox fx:id="vBoxClassroom" alignment="CENTER">
+               <children>
+                  <Label text="Класс" />
+               </children>
+            </VBox>
+            <ComboBox fx:id="comboBoxClassroom" prefWidth="200.0" />
+            <Separator />
+            <VBox fx:id="vBoxRoleLesson" alignment="CENTER">
+               <children>
+                  <Label text="Тип занятия" />
+                  <ComboBox fx:id="comboBoxRoleLesson" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <Separator />
+            <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="5.0" prefWidth="250.0" vgap="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#applyFilter" styleClass="button-blue" text="Применить">
+                     <graphic>
+                        <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-галочка-480.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#clearFilter" styleClass="button-red" text="Сбросить">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/basket.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#addLesson" prefWidth="240.0" text="Добавить">
+                     <graphic>
+                        <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/plus_40632.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </FlowPane>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <stylesheets>
+      <URL value="@../css/main.css" />
+      <URL value="@../css/cell-view.css" />
+   </stylesheets>
+</BorderPane>

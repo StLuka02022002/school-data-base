@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="15.0" styleClass="h-box" stylesheets="@../css/cell-view.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sckooldatabase.controllers.CellViewController">
+   <children>
+      <VBox alignment="CENTER" spacing="5.0">
+         <children>
+            <Label text="Дата" />
+            <DatePicker fx:id="dataPickerDate" prefWidth="145.0" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" spacing="5.0">
+         <children>
+            <Label text="Время начала" />
+            <HBox fx:id="hBoxStartTime" alignment="CENTER" spacing="5.0">
+               <children>
+                  <ComboBox prefWidth="80.0" HBox.hgrow="NEVER" />
+                  <Label text=":" />
+                  <ComboBox prefWidth="80.0" />
+               </children>
+            </HBox>
+            <Label text="Время окончания" />
+            <HBox fx:id="hBoxEndTime" alignment="CENTER" spacing="5.0">
+               <children>
+                  <ComboBox prefWidth="80.0" />
+                  <Label text=":" />
+                  <ComboBox prefWidth="80.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" spacing="5.0">
+         <children>
+            <Label text="Класс" />
+            <ComboBox fx:id="comboBoxClassroom" prefWidth="150.0" />
+            <Label text="Предмет" />
+            <ComboBox fx:id="comboBoxSubject" prefWidth="150.0" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" spacing="5.0">
+         <children>
+            <Label text="Учитель" />
+            <ComboBox fx:id="comboBoxTeacher" prefWidth="150.0" />
+            <Label text="Тип занятия" />
+            <ComboBox fx:id="comboBoxRoleLesson" prefWidth="150.0" />
+         </children>
+      </VBox>
+      <Button fx:id="buttonUpdate" disable="true" mnemonicParsing="false" onAction="#updateLesson" styleClass="button-blue" text="Изменить">
+         <graphic>
+            <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-галочка-480.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="buttonDelete" disable="true" mnemonicParsing="false" onAction="#deleteLesson" styleClass="button-red" text="Удалить">
+         <graphic>
+            <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/crossregular_106296.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</HBox>
