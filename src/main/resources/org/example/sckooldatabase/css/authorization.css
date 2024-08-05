@@ -7,8 +7,8 @@
 }
 
 .combo-box .list-cell {
-    -fx-background-color: #00dffc;
-    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
     -fx-font-size: 14px;
 }
 

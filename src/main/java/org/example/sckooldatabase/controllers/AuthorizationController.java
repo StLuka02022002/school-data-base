@@ -15,10 +15,12 @@ import org.example.sckooldatabase.service.UserService;
 import org.example.sckooldatabase.utils.PasswordUtil;
 import org.example.sckooldatabase.utils.WindowUtil;
 
+import java.util.List;
+
 public class AuthorizationController {
 
     @FXML
-    private ComboBox<String> comboBoxRole;
+    private ComboBox<Role> comboBoxRole;
 
     @FXML
     private Label labelError;
@@ -32,7 +34,7 @@ public class AuthorizationController {
 
     @FXML
     void initialize() {
-        comboBoxRole.setItems(FXCollections.observableList(Role.getRoles()));
+        comboBoxRole.setItems(FXCollections.observableList(List.of(Role.values())));
         textFieldLogin.textProperty().addListener((observable, oldValue, newValue) ->
                 clearError()
         );
@@ -49,7 +51,7 @@ public class AuthorizationController {
                 setError("Пользователь с таким логином уже существует");
                 return;
             }
-            String role = comboBoxRole.getValue();
+            Role role = comboBoxRole.getValue();
             if (role == null) {
                 setError("Выберите роль");
                 return;
@@ -61,10 +63,10 @@ public class AuthorizationController {
 
     }
 
-    public void authorize(String login, String password, String role) {
+    public void authorize(String login, String password, Role role) {
         String solt = PasswordUtil.generateRandomString(5);
         String newPassword = PasswordUtil.hashString(password + solt);
-        User user = new User(login, newPassword, solt, Role.getRole(role));
+        User user = new User(login, newPassword, solt, role);
         authorize(user);
     }
 
