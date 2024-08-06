@@ -1,0 +1,13 @@
+.label {
+    -fx-font-size: 14px; /* Размер шрифта */
+    -fx-font-weight: bold; /* Жирное начертание шрифта */
+}
+
+.separator {
+    -fx-border-width: 4; /* Отсутствие границ */
+    -fx-alignment: center; /* Центрирование разделителя */
+}
+
+.separator:horizontal {
+    -fx-pref-height: 8; /* Высота горизонтального разделителя */
+}

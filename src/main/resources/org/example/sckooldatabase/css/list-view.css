@@ -1,0 +1,32 @@
+.list-view {
+    -fx-background-color: #f0f8ff; /* Светло-голубой фон */
+    -fx-border-color: #87cefa; /* Голубые границы */
+    -fx-border-radius: 10; /* Закругленные границы */
+    -fx-padding: 10; /* Внутренние отступы */
+}
+
+.list-cell {
+    -fx-text-fill: black; /* Цвет текста чёрный */
+    -fx-font-size: 14px; /* Размер шрифта */
+    -fx-background-radius: 10; /* Закругленные границы */
+    -fx-background-color: transparent; /* Прозрачный фон ячейки */
+}
+
+.list-view .list-cell:even {
+    -fx-background-color: #d0e8f8; /* Более насыщенный цвет для четных элементов */
+    /*-fx-background-color: #f0f8fd; /* Цвет фона для чётных элементов */
+}
+
+.list-view .list-cell:odd {
+    -fx-background-color: #white; /* Белый цвет для нечетных элементов */
+}
+
+.list-view .list-cell:hover {
+    -fx-background-color: #87cefa; /* Голубой фон при наведении */
+    -fx-text-fill: white; /* Белый цвет текста при наведении */
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #4682b4; /* Темно-синий фон при выборе */
+    -fx-text-fill: white; /* Белый цвет текста при выборе */
+}

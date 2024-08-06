@@ -1,0 +1,17 @@
+.text-field {
+    -fx-text-fill: black; /* Цвет текста чёрный */
+    -fx-font-size: 14px; /* Размер шрифта */
+
+    -fx-background-color: white; /* Белый фон */
+    -fx-border-color: #87cefa; /* Голубые границы */
+    -fx-border-width: 1; /* Толщина границ */
+    -fx-border-radius: 10; /* Закругленные границы */
+    -fx-background-radius: 10; /* Закругление фона */
+    -fx-prompt-text-fill: #a9a9a9; /* Цвет текста подсказки (placeholder) */
+    -fx-alignment: center; /* Выравнивание текста по центру */
+}
+
+.text-field:focused {
+    -fx-border-color: #4682b4; /* Темно-синий цвет границ при фокусе */
+    -fx-background-color: #f0f8ff; /* Светло-голубой фон при фокусе */
+}

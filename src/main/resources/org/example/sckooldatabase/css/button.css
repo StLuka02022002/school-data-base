@@ -1,0 +1,68 @@
+.button-green {
+    -fx-text-fill: black; /* Цвет текста чёрный */
+    -fx-background-color: transparent; /* Прозрачный фон */
+    -fx-border-color: lightgreen; /* Цвет границ светло-зелёный */
+    -fx-border-radius: 10; /* Закругленные границы */
+    -fx-background-radius: 10; /* Закругленный фон */
+    -fx-border-width: 2; /* Толщина границы */
+    -fx-padding: 5 15 5 15; /* Внутренние отступы */
+    -fx-effect: dropshadow(gaussian, lightgreen, 3, 0.5, 0, 0); /* Тень на границах */
+    -fx-font-size: 14px; /* Размер шрифта */
+}
+
+.button-green:hover {
+    -fx-background-color: lightgreen; /* Фон при наведении */
+    -fx-text-fill: black; /* Цвет текста при наведении */
+    -fx-effect: dropshadow(gaussian, darkgreen, 5, 0.5, 0, 0); /* Более яркая тень при наведении */
+}
+
+.button-green:pressed {
+    -fx-background-color: darkgreen; /* Фон при нажатии */
+    -fx-text-fill: white; /* Цвет текста при нажатии */
+}
+
+.button-red {
+    -fx-text-fill: black; /* Цвет текста чёрный */
+    -fx-background-color: transparent; /* Прозрачный фон */
+    -fx-border-color: red; /* Цвет границ красный */
+    -fx-border-radius: 10; /* Закругленные границы */
+    -fx-background-radius: 10; /* Закругленный фон */
+    -fx-border-width: 2; /* Толщина границы */
+    -fx-padding: 5 15 5 15; /* Внутренние отступы */
+    -fx-effect: dropshadow(gaussian, red, 2, 0.5, 0, 0); /* Тень на границах */
+    -fx-font-size: 14px; /* Размер шрифта */
+}
+
+.button-red:hover {
+    -fx-background-color: derive(red, 50%); /* Немного темнее при наведении */
+    -fx-text-fill: black; /* Цвет текста при наведении */
+    -fx-effect: dropshadow(gaussian, derive(darkred, 50%), 5, 0.5, 0, 0); /* Более яркая тень при наведении */
+}
+
+.button-red:pressed {
+    -fx-background-color: darkred; /* Фон при нажатии */
+    -fx-text-fill: white; /* Цвет текста при нажатии */
+}
+
+.button-blue {
+    -fx-text-fill: black; /* Цвет текста чёрный */
+    -fx-background-color: transparent; /* Прозрачный фон */
+    -fx-border-color: blue; /* Цвет границ синий */
+    -fx-border-radius: 10; /* Закругленные границы */
+    -fx-background-radius: 10; /* Закругленный фон */
+    -fx-border-width: 2; /* Толщина границы */
+    -fx-padding: 5 15 5 15; /* Внутренние отступы */
+    -fx-effect: dropshadow(gaussian, blue, 2, 0.5, 0, 0); /* Тень на границах */
+    -fx-font-size: 14px; /* Размер шрифта */
+}
+
+.button-blue:hover {
+    -fx-background-color: derive(blue, 50%); /* Немного темнее при наведении */
+    -fx-text-fill: black; /* Цвет текста при наведении */
+    -fx-effect: dropshadow(gaussian, derive(darkblue, 50%), 5, 0.5, 0, 0); /* Более яркая тень при наведении */
+}
+
+.button-blue:pressed {
+    -fx-background-color: darkblue; /* Фон при нажатии */
+    -fx-text-fill: white; /* Цвет текста при нажатии */
+}

@@ -45,7 +45,7 @@
       <VBox prefHeight="370.0" prefWidth="255.0" spacing="25.0" BorderPane.alignment="CENTER">
          <children>
             <ListView fx:id="listViewTeachers" prefHeight="355.0" prefWidth="246.0" />
-            <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#addTeacher" prefWidth="130.0" text="Добавить">
+            <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#addTeacher" prefWidth="130.0" styleClass="button-green" text="Добавить">
                <graphic>
                   <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -97,12 +97,12 @@
                      <children>
                         <VBox spacing="25.0">
                            <children>
-                              <Label prefWidth="175.0" text="Фамилия" />
-                              <Label prefWidth="175.0" text="Имя" />
-                              <Label prefWidth="175.0" text="Отчество" />
-                              <Label prefWidth="175.0" text="Дата рождения" />
-                              <Label prefWidth="175.0" text="Рейтинг" />
-                              <Label text="Учебные предметы" />
+                              <Label prefWidth="175.0" styleClass="label-size" text="Фамилия" />
+                              <Label prefWidth="175.0" styleClass="label-size" text="Имя" />
+                              <Label prefWidth="175.0" styleClass="label-size" text="Отчество" />
+                              <Label prefWidth="175.0" styleClass="label-size" text="Дата рождения" />
+                              <Label prefWidth="175.0" styleClass="label-size" text="Рейтинг" />
+                              <Label styleClass="label-size" text="Учебные предметы" />
                            </children>
                         </VBox>
                         <VBox fx:id="vBoxData" spacing="25.0">
@@ -115,7 +115,7 @@
                               <ComboBox fx:id="comboBoxSubject" prefHeight="42.0" prefWidth="350.0" />
                               <HBox spacing="25.0">
                                  <children>
-                                    <Button mnemonicParsing="false" onAction="#addSubject" prefHeight="34.0" prefWidth="31.0">
+                                    <Button mnemonicParsing="false" onAction="#addSubject" prefHeight="34.0" prefWidth="31.0" styleClass="button-green">
                                        <graphic>
                                           <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
@@ -151,7 +151,7 @@
       </ScrollPane>
    </center>
    <stylesheets>
-      <URL value="@../css/adder.css" />
       <URL value="@../css/main.css" />
+      <URL value="@../css/adder.css" />
    </stylesheets>
 </BorderPane>

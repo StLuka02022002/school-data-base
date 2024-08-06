@@ -1,0 +1,68 @@
+.combo-box {
+    -fx-text-fill: black; /* Цвет текста чёрный */
+    -fx-font-size: 14px; /* Размер шрифта */
+    -fx-padding: 2; /* Внутренние отступы */
+    -fx-background-color: #ffffff; /* Белый фон */
+    -fx-border-color: #87cefa; /* Голубые границы */
+    -fx-border-width: 1; /* Толщина границ */
+    -fx-border-radius: 8; /* Закругленные границы */
+    -fx-background-radius: 8; /* Закругление фона */
+    -fx-prompt-text-fill: #a9a9a9; /* Цвет текста подсказки (placeholder) */
+    -fx-alignment: center; /* Выравнивание текста по центру */
+}
+
+.combo-box:focused {
+    -fx-border-color: #4682b4; /* Темно-синий цвет границ при фокусе */
+    -fx-background-color: #f0f8ff; /* Светло-голубой фон при фокусе */
+}
+
+.combo-box .text {
+    -fx-alignment: center; /* Выравнивание текста по центру */
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: black; /* Цвет текста чёрный */
+    -fx-font-size: 12px; /* Размер шрифта */
+    -fx-background-radius: 8; /* Закругленные границы */
+    -fx-background-color: transparent; /* Прозрачный фон ячейки */
+    -fx-alignment: center; /* Выравнивание текста по центру */
+}
+
+.combo-box .list-cell:even {
+    -fx-background-color: #f0f8fd; /* Цвет фона для чётных элементов */
+}
+
+.combo-box .list-cell:odd {
+    -fx-background-color: white; /* Цвет фона для нечётных элементов */
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #87cefa; /* Голубой фон при наведении */
+    -fx-text-fill: white; /* Белый цвет текста при наведении */
+}
+
+.combo-box .list-cell:selected {
+    -fx-font-size: 14px;
+    -fx-text-fill: black; /* Белый цвет текста при выборе */
+}
+
+/* Стилизация стрелочки */
+.combo-box .arrow-button {
+    -fx-background-color: #87cefa; /* Цвет фона кнопки стрелочки */
+    -fx-border-color: #4682b4; /* Цвет границ кнопки стрелочки */
+    -fx-border-radius: 8; /* Закругление */
+    -fx-background-radius: 8; /* Закругление */
+}
+
+.combo-box .arrow {
+    -fx-background-color: #4682b4; /* Цвет стрелочки */
+    -fx-padding: 4; /* Внутренние отступы */
+}
+
+.combo-box:hover .arrow-button {
+    -fx-background-color: #4682b4; /* Цвет фона кнопки стрелочки при наведении */
+}
+
+.combo-box:hover .arrow {
+    -fx-background-color: #87cefa; /* Цвет стрелочки при наведении */
+}

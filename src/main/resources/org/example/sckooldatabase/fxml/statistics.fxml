@@ -60,11 +60,11 @@
                                   <children>
                                       <VBox spacing="25.0">
                                           <children>
-                                              <Label prefWidth="180.0" text="Фамилия" />
-                                              <Label prefWidth="180.0" text="Имя" />
-                                              <Label prefWidth="180.0" text="Отчество" />
-                                              <Label prefWidth="180.0" text="Количесвто занятий" />
-                                              <Label prefWidth="180.0" text="Количесвто замен" />
+                                              <Label prefWidth="180.0" styleClass="label-size" text="Фамилия" />
+                                              <Label prefWidth="180.0" styleClass="label-size" text="Имя" />
+                                              <Label prefWidth="180.0" styleClass="label-size" text="Отчество" />
+                                              <Label prefWidth="180.0" styleClass="label-size" text="Количесвто занятий" />
+                                              <Label prefWidth="180.0" styleClass="label-size" text="Количесвто замен" />
                                           </children>
                                       </VBox>
                                       <VBox fx:id="vBoxDataTeachers" spacing="25.0">
@@ -83,9 +83,9 @@
                            <children>
                               <VBox spacing="25.0">
                                  <children>
-                                    <Label prefWidth="180.0" text="Предмет" />
-                                    <Label prefWidth="180.0" text="Количесвто занятий" />
-                                    <Label prefWidth="180.0" text="Количесвто экзаменов" />
+                                    <Label prefWidth="180.0" styleClass="label-size" text="Предмет" />
+                                    <Label prefWidth="180.0" styleClass="label-size" text="Количесвто занятий" />
+                                    <Label prefWidth="180.0" styleClass="label-size" text="Количесвто экзаменов" />
                                  </children>
                               </VBox>
                               <VBox fx:id="vBoxDataSubjects" spacing="25.0">
@@ -107,8 +107,8 @@
             </content>
         </ScrollPane>
     </center>
-    <stylesheets>
-        <URL value="@../css/adder.css" />
-        <URL value="@../css/main.css" />
-    </stylesheets>
+   <stylesheets>
+      <URL value="@../css/main.css" />
+      <URL value="@../css/adder.css" />
+   </stylesheets>
 </BorderPane>
