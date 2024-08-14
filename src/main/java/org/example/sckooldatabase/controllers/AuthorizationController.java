@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
+import org.example.sckooldatabase.data.Configuration;
 import org.example.sckooldatabase.data.Role;
 import org.example.sckooldatabase.object.User;
 import org.example.sckooldatabase.service.UserService;
@@ -35,6 +36,7 @@ public class AuthorizationController {
     @FXML
     void initialize() {
         comboBoxRole.setItems(FXCollections.observableList(List.of(Role.values())));
+        comboBoxRole.setValue(Role.USER);
         textFieldLogin.textProperty().addListener((observable, oldValue, newValue) ->
                 clearError()
         );
@@ -45,7 +47,7 @@ public class AuthorizationController {
     void logIn(ActionEvent event) {
         String login = textFieldLogin.getText();
         String password = textFieldPassword.getText();
-        if (isValid(login, password)) {
+        if (LoginController.isValid(login, password)) {
             User user = userService.getUserByLogin(login);
             if (user != null) {
                 setError("Пользователь с таким логином уже существует");
@@ -58,13 +60,13 @@ public class AuthorizationController {
             }
             authorize(login, password, role);
         } else {
-            setError("Длина логина и пароля должна быть не менее 6 символов");
+            setError(Configuration.LOGIN_AND_PASSWORD_MESSAGE);
         }
 
     }
 
     public void authorize(String login, String password, Role role) {
-        String solt = PasswordUtil.generateRandomString(5);
+        String solt = PasswordUtil.generateRandomString(Configuration.SOLT_SIZE);
         String newPassword = PasswordUtil.hashString(password + solt);
         User user = new User(login, newPassword, solt, role);
         authorize(user);
@@ -83,15 +85,6 @@ public class AuthorizationController {
     @FXML
     public void signIn(ActionEvent event) {
         WindowUtil.openWindow("fxml/login-window.fxml", ((Node) event.getSource()).getScene());
-    }
-
-
-    private boolean isValid(String login, String password) {
-        if (login == null || login.length() < 6
-                || password == null || password.length() < 6) {
-            return false;
-        }
-        return true;
     }
 
     private void clearError() {

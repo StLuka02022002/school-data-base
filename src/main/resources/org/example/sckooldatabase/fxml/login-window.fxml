@@ -25,7 +25,7 @@
       </VBox>
       <FlowPane alignment="CENTER" layoutX="352.0" layoutY="122.0" orientation="VERTICAL" prefHeight="480.0" prefWidth="460.0" vgap="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="labelError" alignment="CENTER" prefHeight="16.0" prefWidth="290.0" styleClass="error-label" text="Невено введён логин или пароль" textAlignment="CENTER" visible="false" />
+            <Label fx:id="labelError" alignment="CENTER" prefWidth="290.0" styleClass="error-label" text="Невено введён логин или пароль" textAlignment="CENTER" visible="false" wrapText="true" />
             <Label alignment="CENTER" prefHeight="18.0" prefWidth="279.0" text="Вход" textAlignment="CENTER" />
             <TextField fx:id="textFieldLogin" prefHeight="26.0" prefWidth="270.0" promptText="Логин" />
             <PasswordField fx:id="textFieldPassword" promptText="Пароль" />

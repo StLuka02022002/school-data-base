@@ -14,6 +14,16 @@ import java.io.IOException;
 
 public class WindowUtil {
 
+    public static void openWindowOnThisScene(String fxml, Scene scene){
+        try {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource(fxml));
+            Parent homePage = loader.load();
+            scene.setRoot(homePage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void openWindow(String fxml, Scene scene) {
         try {
             FXMLLoader loader = new FXMLLoader(Main.class.getResource(fxml));

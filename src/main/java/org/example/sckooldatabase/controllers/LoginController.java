@@ -35,7 +35,7 @@ public class LoginController {
 
     @FXML
     void logIn(ActionEvent event) {
-        WindowUtil.openWindow("fxml/authorization.fxml", ((Node) event.getSource()).getScene());
+        WindowUtil.openWindowOnThisScene("fxml/authorization.fxml", ((Node) event.getSource()).getScene());
     }
 
     @FXML
@@ -43,26 +43,27 @@ public class LoginController {
         String login = textFieldLogin.getText();
         String password = textFieldPassword.getText();
         if (isValid(login, password)) {
+            String message = "Логин или пароль введены неправильно";
             User user = userService.getUserByLogin(login);
             if (user == null) {
-                setError("Логин или пароль введены неправильно");
+                setError(message);
                 return;
             }
             String newPassword = PasswordUtil.hashString(password + user.getSolt());
             if (!newPassword.equals(user.getPassword())) {
-                setError("Логин или пароль введены неправильно");
+                setError(message);
                 return;
             }
             Configuration.setRole(user.getRole());
-            WindowUtil.openWindow("fxml/main-window.fxml", ((Node) event.getSource()).getScene());
+            WindowUtil.openWindowOnThisScene("fxml/main-window.fxml", ((Node) event.getSource()).getScene());
         } else {
-            setError("Длина логина и пароля должна быть не менее 6 символов");
+            setError(Configuration.LOGIN_AND_PASSWORD_MESSAGE);
         }
     }
 
-    private boolean isValid(String login, String password) {
-        if (login == null || login.length() < 6
-                || password == null || password.length() < 6) {
+    public static boolean isValid(String login, String password) {
+        if (login == null || login.length() < Configuration.LENGTH_LOGIN_AND_PASSWORD
+                || password == null || password.length() < Configuration.LENGTH_LOGIN_AND_PASSWORD) {
             return false;
         }
         return true;

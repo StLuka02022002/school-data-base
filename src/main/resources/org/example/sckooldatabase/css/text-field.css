@@ -1,7 +1,7 @@
 .text-field {
     -fx-text-fill: black; /* Цвет текста чёрный */
     -fx-font-size: 14px; /* Размер шрифта */
-
+    -fx-padding: 10; /* Внутренние отступы */
     -fx-background-color: white; /* Белый фон */
     -fx-border-color: #87cefa; /* Голубые границы */
     -fx-border-width: 1; /* Толщина границ */

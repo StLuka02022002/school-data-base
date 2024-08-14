@@ -1,7 +1,6 @@
 package org.example.sckooldatabase.controllers;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -9,7 +8,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.VBox;
-import javafx.util.StringConverter;
 import org.example.sckooldatabase.data.Configuration;
 import org.example.sckooldatabase.data.Role;
 import org.example.sckooldatabase.object.Classroom;

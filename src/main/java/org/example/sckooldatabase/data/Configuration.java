@@ -7,6 +7,10 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class Configuration {
+    public static int LENGTH_LOGIN_AND_PASSWORD = 6;
+    public static String LOGIN_AND_PASSWORD_MESSAGE = "Длина логина и пароля должна быть не менее " +
+            LENGTH_LOGIN_AND_PASSWORD + " символов";
+    public static int SOLT_SIZE = 5;
     private static String CONFIGURATION_FILE = "configuration.properties";
 
     private static String url;
